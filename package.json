@@ -1,0 +1,24 @@
+{
+  "name": "root",
+  "version": "1.0.0",
+  "description": "lerna",
+  "main": "index.js",
+  "author": "bestofyou <964762268@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "commitizen": "^4.2.2",
+    "cz-lerna-changelog": "^2.0.3",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.5.3",
+    "standard": "^16.0.3",
+    "typescript": "^4.1.3",
+    "webpack-cli": "^4.3.0"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "lint": "eslint --cache --ignore-path .gitignore ./packages/*/src/**.jsx",
+    "build": "yarn tsc -b && lerna run build:webpack",
+    "dev": "lerna run dev --stream"
+  },
+  "dependencies": {}
+}
